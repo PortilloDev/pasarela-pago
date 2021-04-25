@@ -1,0 +1,15 @@
+Info del proyecto
+PHP => Versión 7.2.23
+Laravel => Versión 6.2
+
+Despúes de crear el proyecto, se ha ejecutado los siguientes comandos:
+
+0 - composer create-project --prefer-dist laravel/laravel:^6.0 pasarela-pago
+1 - composer require laravel/ui ^1 => versión uno porque es la valida para la versión 6 de laravel
+2 - php artisan ui vue --auth
+3 - php artisan vendor:publish => y marcar el número correspondiente a la migración de cashier
+4 - correr las migraciones php artisan migrate
+5 - Crear el controlador con la logica de los webhooks de cashier php artisan make:controller StripeWebHookController
+
+
+Despues de las rutas, indicar en el Middleware -> VerifyCsrfToken, las url que se excluyen del token csrf, en el metodo de excepciones
