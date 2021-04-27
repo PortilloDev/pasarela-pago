@@ -14,10 +14,27 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <form action="{{ route('pay') }}" method="post">
+                        @csrf
+
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="{{ config('services.stripe.key') }}"
+                                data-description="subscripción anual"
+                                data-amount="10000"
+                                data-currency="eur"
+                                data-locale="es">
+                            </script>
+
+
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+
+@section('script')
+<script src="https://js.stripe.com/v3"></script>
 @endsection
