@@ -13,3 +13,7 @@ Despúes de crear el proyecto, se ha ejecutado los siguientes comandos:
 
 
 Despues de las rutas, indicar en el Middleware -> VerifyCsrfToken, las url que se excluyen del token csrf, en el metodo de excepciones
+
+
+6 - Instalar laravel/valet - composer global require laravel/valet
+                           - composer global require cretueusebiu/valet-windows
